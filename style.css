@@ -7,13 +7,15 @@
   font-family: 'Roboto', sans-serif;
 }
 
+
 .left {
-  width: 25vw;
-  padding: 10px;
+  width: 25%;
+  padding: 15px;
 }
 
 .right {
-  width: 75vw;
+  width: 75%;
+
 }
 
 
@@ -42,7 +44,7 @@
 }
 
 .library {
-  min-height: 80vh;
+  min-height: 70vh;
   position: relative;
 }
 
@@ -111,7 +113,7 @@
   flex-wrap: wrap;
   gap: 10px;
   margin: 30px;
-  max-height: 70vh;
+  max-height: 60vh;
   overflow-y: scroll;
 }
 
@@ -136,4 +138,107 @@
 .card img {
   width: 100%;
   object-fit: contain;
+}
+
+.right{
+  position: relative;
+}
+
+.playBar {
+  background-color: #dad5d5;
+  filter: invert(1);
+  width: 70vw;
+  position:fixed;
+  bottom: 15px;
+  padding: 6px 10px;
+  border-radius: 30px;
+  height: 40px;
+}
+
+.songbtns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.songList {
+  margin-top: 10px;
+}
+
+.songList ul {
+  max-height: 55vh;
+  overflow-y: scroll;
+  padding:0 12px;
+
+  
+}
+
+.songList ul li {
+  list-style-type: decimal;
+  gap: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 2px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+
+.playnow {
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+
+.songList .info{
+  font-size: 12px;
+  width: 344px;
+}
+
+.playnow span {
+  font-size: 12px;
+  width: 64px;
+  padding: 8px;
+}
+
+.seekbar {
+  height: 0px;
+  width: 94%;
+  border: 2.5px solid red;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  margin: 12px;
+  cursor: pointer;
+}
+
+
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 13px;
+  background-color: red;
+  position: relative;
+  bottom: 6px;
+  left: -0.3%;
+  transition: left 0.5s;
+}
+
+
+
+.songbtns img {
+  cursor: pointer;
+}
+
+.upperPlayBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.songinfo, .songtime {
+  color:black;
+  padding: 0 10px;
 }
