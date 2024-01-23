@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+  --a:0;
+}
 
 *{
   margin: 0;
@@ -144,6 +147,15 @@ body {
   position: absolute;
   right: 10%;
   top: 50%;
+  opacity: var(--a);
+  transition: all 1s;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #4f5551;
+  transition:  all 0.8s;
+  --a:1;
 }
 
 .card > *{
@@ -272,6 +284,36 @@ body {
   padding: 0 10px;
 }
 
+.vol-time {
+  display: flex;
+  width: 220px;
+  justify-content: center;
+  align-items: center;
+}
+
+.range input {
+  width: 80px;
+}
+
+.songtime {
+  
+}
+
+.volume{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volume-svg {
+  width: 18px;
+  margin-right: 15px;
+}
+
+.songinfo {
+  width: 250px;
+}
+
 @media (max-width: 1000px){
   .left {
     position: absolute;
@@ -280,6 +322,7 @@ body {
     z-index: 1;
     width: 400px;
     background-color: black;
+    padding: 0;
   }
 
   .right {
@@ -290,11 +333,11 @@ body {
 
   .playBar {
     margin-left: 10px;
-    width: calc(100vw - 60px);
+    width: calc(100vw - 40px);
   }
 
   .seekbar{
-    width: calc(100vw - 70px);
+    width: calc(100vw - 90px);
   }
 
   .hamburger {
@@ -309,4 +352,39 @@ body {
     justify-content: center;
     margin: 0;
   }
+
+  .songinfo, .songtime {
+    width: auto;
+  }
+
+  .info div {
+    word-break: break-all;
+  }
+
+  .upperPlayBar{
+    display: block;
+    text-align: center;
+  }
+
+  .vol-time{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+
+  .songbtns{
+    margin: 10px;
+  }
+
+  .vol-time{
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .spotifyPlaylists .card{
+    width: 30vh;
+  }
+
 }
