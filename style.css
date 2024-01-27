@@ -293,6 +293,7 @@ body {
 
 .range input {
   width: 80px;
+  cursor: pointer;
 }
 
 .songtime {
@@ -303,6 +304,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .volume-svg {
