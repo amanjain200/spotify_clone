@@ -22,7 +22,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`https://eclectic-tarsier-9797e9.netlify.app/${folder}/`);
+  let a = await fetch(`./${folder}/`);
 
   let response = await a.text();
   //console.log(response);
@@ -83,7 +83,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`https://eclectic-tarsier-9797e9.netlify.app/songs/`);
+  let a = await fetch(`./songs/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -99,9 +99,7 @@ async function displayAlbums() {
 
       console.log(folder);
       //getting metadata of folder
-      let a = await fetch(
-        `https://eclectic-tarsier-9797e9.netlify.app/${folder}/info.json`
-      );
+      let a = await fetch(`./songs/${folder}/info.json`);
       let response = await a.json();
       cardContainer.innerHTML =
         cardContainer.innerHTML +
