@@ -22,7 +22,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`./${folder}/`);
+  let a = await fetch(`./${folder}`);
 
   let response = await a.text();
   //console.log(response);
@@ -143,7 +143,7 @@ async function displayAlbums() {
 
 async function main() {
   //get the songs
-  await getSongs("songs/Arijit%20Singh");
+  await getSongs("songs/other");
   //console.log(songs);
   playMusic(songs[0], true);
 
