@@ -1,7 +1,7 @@
 console.log("Hello World");
 let currentSong = new Audio();
 let songs;
-let currFolder;
+let currFolder="other";
 
 function secondsToMinutesSeconds(seconds) {
   // Ensure seconds is a non-negative number
